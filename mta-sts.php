@@ -44,7 +44,7 @@ if (!ctype_digit($max_age) || $max_age < $age_min || $max_age > $age_max) {
 $dir = 'dist/.well-known';
 $file = "$dir/mta-sts.txt";
 
-if (!is_dir($dir) && !mkdir($dir, 0644, true)) {
+if (!is_dir($dir) && !mkdir($dir, 0755, true)) {
     error('Failed to create directory: %s', $dir);
 }
 
